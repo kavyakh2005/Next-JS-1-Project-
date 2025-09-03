@@ -8,7 +8,7 @@ export default async function RecipesPage() {
   const topRecipes = recipes.slice(0, 4);
   const featureRecipes = recipes.slice(4, 8);
   const trendingRecipes = recipes.slice(8, 12);
-  console.log(topRecipes, featureRecipes, trendingRecipes);
+  // console.log(topRecipes, featureRecipes, trendingRecipes);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -38,7 +38,7 @@ export default async function RecipesPage() {
         <h2 className="text-2xl font-bold mb-6">Top Recipes</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {topRecipes.map((recipes) => (
-            <RecipeCard key={recipes.id} name={recipes.name} image={recipes.image} prepTimeMinutes={recipes.prepTimeMinutes} cookTimeMinutes={recipes.cookTimeMinutes}/>
+            <RecipeCard key={recipes.id} id={recipes.id} name={recipes.name} image={recipes.image} prepTimeMinutes={recipes.prepTimeMinutes} cookTimeMinutes={recipes.cookTimeMinutes}/>
           ))}
         </div>
       </section>
@@ -48,7 +48,7 @@ export default async function RecipesPage() {
         <h2 className="text-2xl font-bold mb-6">Featured Recipes</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {featureRecipes.map((recipes) => (
-            <RecipeCard key={recipes.id} name={recipes.name} image={recipes.image} prepTimeMinutes={recipes.prepTimeMinutes} cookTimeMinutes={recipes.cookTimeMinutes}/>
+            <RecipeCard key={recipes.id} id={recipes.id} name={recipes.name} image={recipes.image} prepTimeMinutes={recipes.prepTimeMinutes} cookTimeMinutes={recipes.cookTimeMinutes}/>
           ))}
         </div>
       </section>
@@ -58,7 +58,7 @@ export default async function RecipesPage() {
         <h2 className="text-2xl font-bold mb-6">Trending Recipes</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {trendingRecipes.map((recipes) => (
-            <RecipeCard key={recipes.id} name={recipes.name} image={recipes.image} prepTimeMinutes={recipes.prepTimeMinutes} cookTimeMinutes={recipes.cookTimeMinutes}/>
+            <RecipeCard key={recipes.id} id={recipes.id} name={recipes.name} image={recipes.image} prepTimeMinutes={recipes.prepTimeMinutes} cookTimeMinutes={recipes.cookTimeMinutes}/>
           ))}
         </div>
       </section>
