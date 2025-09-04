@@ -1,4 +1,5 @@
 import RecipeCard from "@/Components/card";
+import Slider from "@/Components/Slider";
 import { getReceipes } from "@/library/api-call";
 
 export default async function RecipesPage() {
@@ -9,6 +10,8 @@ export default async function RecipesPage() {
   const featureRecipes = recipes.slice(4, 8);
   const trendingRecipes = recipes.slice(8, 12);
   // console.log(topRecipes, featureRecipes, trendingRecipes);
+
+  const imageSlider = recipes.slice(13 , 20)
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -24,13 +27,11 @@ export default async function RecipesPage() {
             Explore Now
           </button>
         </div>
-        <div>
-          <img
-            src="https://picsum.photos/600/400"
-            alt="Top Recipe"
-            className="rounded-xl shadow-lg w-full h-96 object-cover"
-          />
-        </div>
+
+    <Slider data={imageSlider}/>
+
+
+
       </section>
 
       {/* 2) Top Recipes */}
